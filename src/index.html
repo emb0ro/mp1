@@ -4,10 +4,162 @@
         <meta charset="utf-8" />
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>MP1</title>
+        <title>UIUC Campus Guide</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     </head>
     <body>
-        <h1>Hello World! Welcome to MP1!</h1>
-        <img src="assets/image.jpg">
+
+        <header id="navbar" class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="uiuc_logo.jpg" alt="UIUC Logo" class="logo-img">
+                    <span>UIUC Guide</span>
+                </div>
+                <nav id="nav-menu">
+                    <a href="#main" class="nav-item active">Home</a>
+                    <a href="#study" class="nav-item">Study Spots</a>
+                    <a href="#food" class="nav-item">Food & Cafes</a>
+                    <a href="#resources" class="nav-item">Academic Resources</a>
+                    <a href="#surrounding" class="nav-item">Champaign-Urbana</a>
+                    <a href="#photos" class="nav-item">Photos</a>
+                    <a href="#videos" class="nav-item">More of Campus</a>
+                </nav>
+            </div>
+        </header>
+
+        <section id="main" class="stripe main-stripe">
+            <div class="centered-box">
+                <h1 class="title-upper">Welcome to Emilia's UIUC Campus Guide!</h1>
+                <p>A hub for all your UIUC informational needs</p>
+            </div>
+        </section>
+
+        <section id="study" class="stripe">
+            <h2><i class="fa-solid fa-book-open"></i> Study Spot Recommendations</h2>
+            <div class="multi-column-container">
+                <div class="column photo">
+                    <img src="grainger.jpg" alt="Grainger Engineering Library">
+                    <h3>Grainger Engineering Library</h3>
+                    <p>A pretty popular spot, but for a reason - it's open 24/7 Monday through Friday and has plenty of
+                        seating options on both quiet and collaborative floors. Once classes ramp up, it gets hard to find
+                        space though.
+                    </p>
+                </div>
+                <div class="column photo">
+                    <img src="psych_lab.jpeg" alt="Psychology Lab">
+                    <h3>Department of Psychology</h3>
+                    <p>Silent and ambient. There's an Espresso Royale across the street too!
+                    </p>
+                </div>
+                <div class="column photo">
+                    <img src="krannert.jpeg" alt="Krannert Center">
+                    <h3>Krannert Center for the Performing Arts</h3>
+                    <p>Very underrated! Plenty of seating and a cafe open throughout the day. It's right across from
+                        ISR (great for freshmen dorming there) and light jazz adds to the ambiance.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="food" class="stripe alt-bg">
+            <h2><i class="fa-solid fa-utensils"></i> Food & Cafes</h2>
+            <p>Click a category for my recommendations!</p>
+            <div class="multi-column-container">
+                <div class="column dining-card" data-category="lunch">
+                    <h3>Lunch</h3>
+                    <p>Quick stops for food in between classes
+                    </p>
+                </div>
+                <div class="column dining-card" data-category="coffee">
+                    <h3>Coffee and Drinks</h3>
+                    <p>The best spots for matcha, boba, and coffee
+                    </p>
+                </div>
+                <div class="column dining-card" data-category="dinner">
+                    <h3>Dinner</h3>
+                    <p>Sit-down restaurants and casual yet filling dining options
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="resources" class="stripe">
+            <h2><i class="fa-solid fa-graduation-cap"></i> Helpful Academic Resources</h2>
+            <div class="multi-column-container">
+                <div class="column">
+                    <h3>
+                        <a href="https://courses.illinois.edu" 
+                        target="_blank">Course Explorer</a>
+                    </h3>
+                    <p>Catalogue of classes offered here at UIUC, including course descriptions, prerequisites, and more.
+                    </p>
+                </div>
+                <div class="column">
+                    <h3>
+                        <a href="https://waf.cs.illinois.edu/discovery/grade_disparity_between_sections_at_uiuc/" 
+                        target="_blank">Grade Disparities</a>
+                    </h3>
+                    <p>See average distribution of grades per class/professor.
+                    </p>
+                </div>
+                <div class="column">
+                    <h3>
+                        <a href="https://calendars.illinois.edu/list/7" 
+                        target="_blank">Event Calendar</a>
+                    </h3>
+                    <p>Free campus events and activities happening throughout the semester.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="surrounding" class="stripe fixed-bg-stripe">
+            <div class="content-overlay">
+                <h2>Things to Do in Champaign-Urbana</h2>
+                <p>Explore our various parks, the downtown area, and local attractions.</p>
+                <button id="open-modal-btn" class="btn">Learn More</button>
+            </div>
+        </section>
+        
+        <section id="photos" class="stripe">
+            <h2><i class="fa-solid fa-images"></i> Photo Gallery</h2>
+            <div class="carousel-wrapper">
+                <button id="prev-btn" class="carousel-btn"><i class="fa-solid fa-chevron-left"></i></button>
+                <div class="carousel-viewport">
+                    <div id="carousel-track" class="carousel-track">
+                        <div class="carousel-slide"><img src="spring_quad.jpeg.jpg" alt="Main Quad"></div>
+                        <div class="carousel-slide"><img src="fall_engineering.jpg" alt="Engineering Quad"></div>
+                        <div class="carousel-slide"><img src="football_game.jpg" alt="Football Game"></div>
+                    </div>
+                </div>
+                <button id="next-btn" class="carousel-btn"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+        </section>
+
+        <section id="videos" class="stripe alt-bg">
+            <h2><i class="fa-solid fa-video"></i> More of Campus</h2>
+            <video controls width="600" class="video-player">
+                <source src="uiuc_tiktok.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
+
+        <div id="modal-window" class="modal">
+            <div class="modal-content scrollable-modal">
+                <span id="close-modal-btn" class="close-btn">&times;</span>
+                <h3 id="modal-title">Category Title</h3>
+                <div id="modal-body" class="spot-list"></div>
+            </div>
+        </div>
+
+
+        <footer class="footer">
+            <p>&copy; 2026 UIUC Campus Guide. Built for CS 409 - MP1.</p>
+            <div class="social-links">
+                <a href="https://x.com/UofIllinois?lang=en" target="_blank" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://www.instagram.com/illinois1867/?hl=en" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@uofillinois" target="_blank" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+        </footer>
     </body>
 </html>
